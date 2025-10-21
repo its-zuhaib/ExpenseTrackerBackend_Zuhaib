@@ -23,6 +23,7 @@ app.use('/api',authRoutes);
 app.get('/',(req,res)=>{
   res.send('backend running')}
 )
+
 app.listen(PORT,()=>{
   console.log(`server running on ${PORT}`)
 })
