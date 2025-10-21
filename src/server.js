@@ -15,14 +15,17 @@ app.use(express.json());
 app.use(cors())
 
 const authRoutes=require('./routes/authRoutes')
-// const expenseRoutes=require('./routes/expenseRoutes')
-
-app.use('/api',authRoutes);
-// app.use('/api',expenseRoutes)
+const expensesRoutes=require('./routes/expensesRoutes')
+const reportsRoutes=require('./routes/reportsRoutes')
 
 app.get('/',(req,res)=>{
   res.send('backend running')}
 )
+
+app.use('/api',authRoutes);
+app.use('/api',expensesRoutes)
+app.use('/api',reportsRoutes)
+
 
 app.listen(PORT,()=>{
   console.log(`server running on ${PORT}`)

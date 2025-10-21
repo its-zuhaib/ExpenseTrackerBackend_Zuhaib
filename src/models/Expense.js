@@ -2,9 +2,10 @@ const mongoose=require('mongoose')
 
 const ExpenseSchema=new mongoose.Schema(
    {
-      userID:{
+      userId:{
          type:String,
-         required:true
+         required:true,
+         index:true
       },
       title:{
          type:String,
@@ -16,7 +17,8 @@ const ExpenseSchema=new mongoose.Schema(
       },
       amount:{
          type:Number,
-         required:true
+         required:true,
+         min:0
       },
       date:{
          type:Date,

@@ -1,4 +1,3 @@
-const axios=require('axios')
 const admin=require('../firebase/firebaseConfig')
 
 const key=process.env.FIREBASE_WEB_API_KEY;
